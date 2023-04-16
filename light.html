@@ -76,17 +76,6 @@
         @media (prefers-color-scheme: dark) {
             #videoLight {
                 display: none;
-                mix-blend-mode: darken;
-            }
-        }
-
-        #videoDark {
-            display: none;
-        }
-        @media (prefers-color-scheme: dark) {
-            #videoDark {
-                display: block;
-                mix-blend-mode: lighten;
             }
         }
     </style>
@@ -94,7 +83,6 @@
 
 <body>
     <video id="videoLight" src="./memoji-light.mp4" autoplay muted loop poster="./damir-kotoric-memoji-light-poster.jpg"></video>
-    <video id="videoDark" src="./memoji-dark.mp4" autoplay muted loop poster="./damir-kotoric-memoji-dark-poster.jpg"></video>
 </body>
 
 </html>
