@@ -58,17 +58,43 @@
         html, body {
             background: #FAFAFA;
         }
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                background: #0C0C0E;
+            }
+        }
 
         video {
             height: 100%;
             pointer-events: none;
             width: 100%;
         }
+
+        #videoLight {
+            display: block;
+        }
+        @media (prefers-color-scheme: dark) {
+            #videoLight {
+                display: none;
+                mix-blend-mode: darken;
+            }
+        }
+
+        #videoDark {
+            display: none;
+        }
+        @media (prefers-color-scheme: dark) {
+            #videoDark {
+                display: block;
+                mix-blend-mode: lighten;
+            }
+        }
     </style>
 </head>
 
 <body>
     <video id="videoLight" src="./memoji-light.mp4" autoplay muted loop poster="./damir-kotoric-memoji-light-poster.jpg"></video>
+    <video id="videoDark" src="./memoji-dark.mp4" autoplay muted loop poster="./damir-kotoric-memoji-dark-poster.jpg"></video>
 </body>
 
 </html>
